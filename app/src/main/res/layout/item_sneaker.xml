@@ -1,58 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
+    android:padding="8dp"
+    android:layout_gravity="center"
+    android:gravity="center"
     app:cardCornerRadius="12dp"
-    app:cardElevation="4dp">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="8dp"
-        android:gravity="center">
+    app:cardElevation="4dp"
+    >
         <ImageView
             android:id="@+id/sneakerImageView"
             android:layout_width="120dp"
             android:layout_height="120dp"
+            android:importantForAccessibility="no"
             android:scaleType="centerCrop"
-            android:contentDescription="Zdjęcie auta"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"
+            />
 
         <TextView
             android:id="@+id/sneakerModelNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Air fryer srier"
+            android:text="[model buta]"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            tools:ignore="HardcodedText"
+            />
 
         <TextView
             android:id="@+id/sneakerBrandTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nike"
-            android:textSize="14sp" />
+            android:text="[marka buta]"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText"
+            />
 
         <TextView
             android:id="@+id/sneakerReleaseYearTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rok: 2022"
+            android:text="[rok wydania buta]"
             android:textSize="14sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            />
         <TextView
             android:id="@+id/sneakerResellPriceTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cena: 500zł"
-            android:textSize="14sp"
-            android:textColor="#00FF00"
-            android:textStyle="bold"/>
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:text="[cena buta]"
+            android:textSize="16sp"
+            android:textColor="#477247"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            />
+</LinearLayout>
