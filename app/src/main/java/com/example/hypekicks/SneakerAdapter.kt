@@ -1,5 +1,6 @@
 package com.example.hypekicks
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -10,15 +11,14 @@ import com.example.hypekicks.databinding.ItemSneakerBinding
 
 class SneakerAdapter(
     private val context: Context,
-    private val sneakersList: List<Sneakers>
+    private val sneakersList: List<Sneaker>
 ): BaseAdapter() {
     override fun getCount(): Int = sneakersList.size
-
     override fun getItem(position: Int): Any = sneakersList[position]
-
     override fun getItemId(position: Int): Long = position.toLong()
 
-    override fun getView( position: Int, convertView: View?, parent: ViewGroup?): View? {
+    @SuppressLint("SetTextI18n")
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val binding: ItemSneakerBinding
         val view: View
 
@@ -38,7 +38,7 @@ class SneakerAdapter(
         binding.sneakerBrandTextView.text = sneaker.brand
         binding.sneakerModelNameTextView.text = sneaker.modelName
         binding.sneakerReleaseYearTextView.text = "Rok: ${sneaker.releaseYear}"
-        binding.sneakerResellPriceTextView.text = "Odsprzedać: ${sneaker.resellPrice}"
+        binding.sneakerResellPriceTextView.text = "Cena za odsprzedanie: ${sneaker.resellPrice} zł"
 
         Glide.with(context)
             .load(sneaker.imageUrl)

@@ -1,6 +1,6 @@
 package com.example.hypekicks
 
-data class Sneakers(
+data class Sneaker (
     val brand: String = "",
     val imageUrl: String = "",
     val modelName: String = "",
