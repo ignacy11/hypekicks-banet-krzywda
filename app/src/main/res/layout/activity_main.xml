@@ -3,34 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<!--    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="HypeKicks app"
-        android:textSize="42sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText"
-        />-->
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/sneakersSearchview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:background="#FFFFFF"
-        android:elevation="2dp"
-        app:iconifiedByDefault="false"
-        app:queryHint="Szukaj Sneakersów..." />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="admin"/>
+        android:orientation="horizontal"
+        >
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/sneakersSearchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="#191919"
+            android:foregroundTint="#fafafa"
+            android:elevation="2dp"
+            app:iconifiedByDefault="false"
+            app:queryHint="Szukaj Sneakersów..." />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/adminPanelButton"
+            android:text="Admin Panel"
+            tools:ignore="HardcodedText"
+            />
+    </LinearLayout>
 
     <GridView
         android:id="@+id/sneakersGridView"
@@ -39,6 +39,7 @@
         android:padding="10dp"
         android:numColumns="2"
         android:horizontalSpacing="8dp"
-        android:verticalSpacing="8dp"/>
+        android:verticalSpacing="8dp"
+        />
 
 </LinearLayout>

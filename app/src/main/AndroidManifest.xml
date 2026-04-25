@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hypekicks">
         <activity
-            android:name=".Storefront"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
