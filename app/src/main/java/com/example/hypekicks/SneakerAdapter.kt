@@ -11,7 +11,7 @@ import com.example.hypekicks.databinding.ItemSneakerBinding
 
 class SneakerAdapter(
     private val context: Context,
-    private val sneakersList: List<Sneaker>
+    private val sneakersList: MutableList<Sneaker>
 ): BaseAdapter() {
     override fun getCount(): Int = sneakersList.size
     override fun getItem(position: Int): Any = sneakersList[position]
