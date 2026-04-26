@@ -38,7 +38,7 @@ class SneakerAdapter(
         binding.sneakerBrandTextView.text = sneaker.brand
         binding.sneakerModelNameTextView.text = sneaker.modelName
         binding.sneakerReleaseYearTextView.text = "Rok: ${sneaker.releaseYear}"
-        binding.sneakerResellPriceTextView.text = "Cena za odsprzedanie: ${sneaker.resellPrice} zł"
+        binding.sneakerResellPriceTextView.text = "Cena: ${sneaker.resellPrice} zł"
 
         Glide.with(context)
             .load(sneaker.imageUrl)
