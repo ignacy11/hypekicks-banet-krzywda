@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    android:padding="8dp"
-    android:layout_gravity="center"
-    android:gravity="center"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="4dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="2dp"
+    android:background="#999999"
     >
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        >
         <ImageView
             android:id="@+id/sneakerImageView"
             android:layout_width="120dp"
@@ -62,4 +68,5 @@
             android:textStyle="bold"
             tools:ignore="HardcodedText"
             />
-</LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
