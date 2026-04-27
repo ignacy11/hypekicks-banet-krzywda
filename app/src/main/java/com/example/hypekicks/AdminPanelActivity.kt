@@ -1,5 +1,6 @@
 package com.example.hypekicks
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -70,6 +71,19 @@ class AdminPanelActivity : AppCompatActivity() {
                 )
             }
         }
+        binding.sneakersAdminListView.setOnItemClickListener { parent, view, position, id ->
+            val clickedSneaker = sneakersList[position]
+
+
+            val intent = Intent(this, EditSneakerPriceActivity::class.java)
+            intent.putExtra("sneaker", clickedSneaker)
+            startActivity(intent)
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        fetchDataFromCloud()
     }
 
     fun fetchDataFromCloud() {

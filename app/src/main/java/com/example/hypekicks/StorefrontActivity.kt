@@ -60,8 +60,6 @@ class StorefrontActivity : AppCompatActivity() {
             intent.putExtra("sneakers",ArrayList(allSneakersList))
             startActivity(intent)
         }
-
-
         fetchDataFromCloud()
     }
     override fun onResume() {

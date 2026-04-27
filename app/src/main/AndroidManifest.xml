@@ -15,6 +15,9 @@
             android:name=".SneakerDetailsActivity"
             android:exported="false" />
         <activity
+            android:name=".EditSneakerPriceActivity"
+            android:exported="false" />
+        <activity
             android:name=".AdminPanelActivity"
             android:exported="false" />
         <activity

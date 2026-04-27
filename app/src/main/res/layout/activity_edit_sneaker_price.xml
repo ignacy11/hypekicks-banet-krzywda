@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="2dp"
+    android:background="#999999"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        >
+        <ImageView
+            android:id="@+id/sneakerImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            />
+
+        <TextView
+            android:id="@+id/sneakerModelNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="[model buta]"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#fafafa"
+            tools:ignore="HardcodedText"
+            />
+
+        <TextView
+            android:id="@+id/sneakerBrandTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[marka buta]"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText"
+            />
+
+        <TextView
+            android:id="@+id/sneakerReleaseYearTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[rok wydania buta]"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            />
+        <TextView
+            android:id="@+id/sneakerResellPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[cena buta]"
+            android:textSize="16sp"
+            android:textColor="#477247"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText"
+            />
+        <EditText
+            android:id="@+id/newSneakerPriceEditText"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:hint="Nowa cena buta"
+            android:importantForAutofill="no"
+            tools:ignore="HardcodedText"
+            android:inputType="number" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+        <Button
+            android:id="@+id/confirmPriceChangeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_square"
+            android:text="Zatwierdź"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
