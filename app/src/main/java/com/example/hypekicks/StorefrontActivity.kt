@@ -47,6 +47,14 @@ class StorefrontActivity : AppCompatActivity() {
                 return true
             }
         })
+
+        binding.sneakersGridView.setOnItemClickListener {_, _, position, _ ->
+            val clickedSneaker = sneakersList[position]
+            val intent = Intent(this, SneakerDetailsActivity::class.java)
+            intent.putExtra("SNEAKER_DATA", clickedSneaker)
+            startActivity(intent)
+        }
+
         binding.adminPanelButton.setOnClickListener { _ ->
             val intent = Intent(this, AdminPanelActivity::class.java)
             intent.putExtra("sneakers",ArrayList(allSneakersList))
@@ -54,13 +62,14 @@ class StorefrontActivity : AppCompatActivity() {
         }
 
 
-        binding.sneakersGridView.setOnItemClickListener {_, _, position, _ ->
-            val clickedSneaker = sneakersList[position]
-            Toast.makeText(this,"clicked a sneaker", Toast.LENGTH_SHORT).show()
-            // TODO – add and show DetailsActivity when a sneaker is clicked
-        }
-
         fetchDataFromCloud()
+    }
+    override fun onResume() {
+        super.onResume()
+
+        binding.sneakersSearchView.setQuery("",false)
+
+        binding.sneakersSearchView.clearFocus()
     }
 
     fun fetchDataFromCloud() {
